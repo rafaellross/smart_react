@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 const api = "http://127.0.0.1:8000/api"
 
 
@@ -19,8 +19,8 @@ export const get = (qa_Id) =>
 
 
 
-export const getAll = () =>
-  fetch(`${api}/books`, { headers })
+export const getAll = (query) =>
+  fetch(`${api}/${query}`, { headers })
     .then(res => res.json())
     .then(data => data)
 

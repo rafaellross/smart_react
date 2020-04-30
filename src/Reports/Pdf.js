@@ -16,7 +16,14 @@ const styles = StyleSheet.create({
   },
   doubleLine: {
     height: '40.5px'
-  }
+  },
+
+  text: 
+    {
+      fontSize: '16pt'
+  
+    }
+  
 });
 
 // Create Document Component
@@ -29,7 +36,7 @@ const Pdf = () => (
           <View style={{display: "block", flexDirection: "row"}}>
             <View>
               <Text
-                style={{borderStyle: 'solid', borderColor: 'black', borderWidth: '1', width: '350px'}}
+                style={{borderStyle: 'solid', borderColor: 'black', borderWidth: '1', width: '350px', ...styles.text}}
                 
                 >Smart Plumbing Solutions Pty Ltd</Text>
             </View>
@@ -74,6 +81,11 @@ const Pdf = () => (
               <Text 
                 style={{borderStyle: 'solid', borderColor: 'black',marginLeft: '0', paddingLeft: '0', borderRightWidth: '1', borderBottomWidth: '1', width: '200px',  ...styles.doubleLine}}            
                 >Customer:</Text>          
+            </View>
+            <View style={styles.section}>
+              <Text 
+                style={{borderStyle: 'solid', borderColor: 'black',marginLeft: '0', paddingLeft: '0', borderRightWidth: '1', borderBottomWidth: '1', width: '200px',  ...styles.doubleLine}}            
+                >Unit/Area No:</Text>          
             </View>
             
           </View>          
